@@ -14,17 +14,10 @@ try:
     _YOLO_AVAILABLE = True
 except ImportError:
     _YOLO_AVAILABLE = False
-    print("[WARNING] ultralytics library not found. 'real' environment mode will be disabled.")
-    # Define a dummy YOLO class if not available to avoid NameErrors later
+    # a dummy YOLO class if not available to avoid NameErrors later
     class YOLO:
         def __init__(self, *args, **kwargs): pass
-        def __call__(self, *args, **kwargs): return [] # Return empty list
-
-# --- Configuration ---
-# --- Environment Specific ---
-# Set via command line argument --environment ['real', 'simulated']
-
-
+        def __call__(self, *args, **kwargs): return [] 
 
 
 class BallBounceCounter:
