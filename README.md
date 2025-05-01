@@ -20,7 +20,33 @@ This project implements a ball tracking and bounce counting algorithm using diff
 
 ---
 
-## Input Instructions
+## Instructions
+
+### Prerequisites
+Ensure you have Python 3.8 or higher installed on your system.
+
+### Required Libraries
+Install the required Python libraries using the following command:
+
+```bash
+pip install -r requirements.txt
+```
+
+If a `requirements.txt` file is not available, you can manually install the following libraries:
+- `numpy`
+- `opencv-python`
+- `imutils`
+- `ultralytics` (for YOLOv8)
+- `argparse`
+
+### Running the Program
+To run the program, use the following command:
+
+```bash
+python main.py --environment [real|simulated] -v [video_path] -o [output_path]
+```
+
+Replace `[real|simulated]` with the desired environment (optional), `[video_path]` with the path to your input video (optional), and `[output_path]` with the path to save the output video (optional).
 
 ### Default Environment
 The default environment is set to `real`. You can override this by specifying the `--environment` argument.
@@ -32,7 +58,7 @@ You can specify an output file for saving the processed video using the `-o` or 
 python main.py --environment simulated -o output.mp4
 ```
 
-This will save the processed video to `output.mp4`.
+This will save the processed video to `output.mp4`, in outputs folder.
 
 ---
 
