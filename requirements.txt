@@ -1,0 +1,6 @@
+numpy
+math
+opencv-python
+imutils
+ultralytics
+argparse
