@@ -560,7 +560,7 @@ class BallBounceCounter:
 
         # Modify bounce detection to consider only bounces in the lower part of the frame
         if self.environment == 'real':
-            frame_lower_bound = int(self.frame_height * 0.68)  # Lower 25% for real mode
+            frame_lower_bound = int(self.frame_height * 0.68)  # Lower 32% for real mode
         elif self.environment == 'simulated':
             frame_lower_bound = int(self.frame_height * 0.90)  # Lower 10% for simulated mode
         else:
